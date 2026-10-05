@@ -1,0 +1,381 @@
+/* =========================
+   BASE
+========================= */
+
+:root {
+    --color-primary: #163a5f;
+    --color-text: #1f2933;
+    --color-text-secondary: #52606d;
+    --color-background: #ffffff;
+    --color-background-light: #f5f7f9;
+    --color-border: #d9e2ec;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 18px;
+
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+
+    text-align: center;
+    font-weight: 700;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background: var(--color-primary);
+}
+
+.btn-secondary {
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.btn-light {
+    color: var(--color-primary);
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-light-outline {
+    color: #ffffff;
+    background: transparent;
+    border-color: #ffffff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 48px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 36px;
+
+    background: var(--color-background-light);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    margin-bottom: 16px;
+
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+
+    color: #18212b;
+}
+
+.hero-content > p {
+    margin-bottom: 26px;
+
+    font-size: 18px;
+    color: var(--color-text-secondary);
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.hero-image img {
+    max-height: 450px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   SEZIONI
+========================= */
+
+main section {
+    padding: 64px 24px;
+}
+
+main section h2 {
+    margin-bottom: 32px;
+
+    font-size: 30px;
+    line-height: 1.15;
+
+    color: #18212b;
+}
+
+
+/* =========================
+   SERVIZI
+========================= */
+
+.services {
+    background: var(--color-background);
+}
+
+.services-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 16px;
+}
+
+.service-card {
+    padding: 24px;
+
+    background: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--color-primary);
+}
+
+.service-card p {
+    margin-bottom: 0;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   ORARI
+========================= */
+
+.hours {
+    background: var(--color-background-light);
+}
+
+.hours-content {
+    margin-bottom: 24px;
+}
+
+.hours-content p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   DOVE SIAMO
+========================= */
+
+.location {
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+
+    background: var(--color-background);
+}
+
+.location-content a {
+    margin-top: 16px;
+}
+
+.location-image img {
+    max-height: 400px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   FIDUCIA / RECENSIONI
+========================= */
+
+.trust {
+    background: var(--color-background-light);
+}
+
+.trust > p {
+    color: var(--color-text-secondary);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 32px;
+    gap: 16px;
+}
+
+.review {
+    margin: 0;
+    padding: 24px;
+
+    background: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+
+/* =========================
+   CTA FINALE
+========================= */
+
+.final-cta {
+    text-align: center;
+
+    background: var(--color-primary);
+}
+
+.final-cta h2 {
+    color: #ffffff;
+}
+
+.final-cta > p {
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    color: #e6edf3;
+}
+
+.final-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 40px 24px;
+
+    color: var(--color-border);
+    background: #101820;
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+
+.footer a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 800px) {
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+
+        padding: 72px 8%;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 50%;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 5vw, 60px);
+    }
+
+    .hero-actions {
+        flex-direction: row;
+    }
+
+    main section {
+        padding: 80px 8%;
+    }
+
+    .location {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .location-content,
+    .location-image {
+        width: 50%;
+    }
+
+    .reviews {
+        flex-direction: row;
+    }
+
+    .review {
+        flex: 1;
+    }
+
+    .final-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 48px 8%;
+    }
+}
